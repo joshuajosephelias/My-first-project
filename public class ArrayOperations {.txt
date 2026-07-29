@@ -1,0 +1,45 @@
+public class ArrayOperations {
+    public static void main(String[] args) {
+        // 1. Declare and initialize the integer array
+        int[] numbers = {10, 20, 30, 40, 50, 60, 70, 55, 83, 78};
+
+        // Initialize variables for calculations
+        int sum = 0;
+        int max = numbers[0]; // Assume the first element is the largest initially
+        int min = numbers[0]; // Assume the first element is the smallest initially
+
+        // 2. Display all array elements and perform calculations
+        System.out.print("Array elements: ");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+            
+            // 3. Accumulate the sum
+            sum += numbers[i];
+
+            // 4. Find the largest number
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+
+            // 4. Find the smallest number
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        System.out.println(); // Move to the next line after printing elements
+
+        // 5. Calculate the average 
+        // (Casting sum to double ensures we get a precise decimal value)
+        double average = (double) sum / numbers.length;
+
+        // Print the final results
+        System.out.println("--------------------------------");
+        System.out.println("Total Sum:       " + sum);
+        System.out.println("Largest Number:  " + max);
+        System.out.println("Smallest Number: " + min);
+        System.out.println("Average:         " + average);
+        System.out.println("--------------------------------");
+
+
+    }
+}
